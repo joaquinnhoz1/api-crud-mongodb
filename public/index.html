@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Frontend API CRUD MongoDB</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Panel de Gestión de Productos</h1>
+      <p class="muted">
+        Frontend de prueba para la API REST con usuarios, categorías y productos.
+      </p>
+
+      <div id="status" class="status"></div>
+
+      <div class="grid top-grid">
+        <div class="card">
+          <h2>Registro</h2>
+          <div class="row">
+            <input id="registerNombre" placeholder="Nombre" />
+          </div>
+          <div class="row">
+            <input id="registerEmail" placeholder="Email" />
+          </div>
+          <div class="row">
+            <input id="registerPassword" type="password" placeholder="Password" />
+          </div>
+          <button id="registerBtn">Registrar usuario</button>
+        </div>
+
+        <div class="card login-card">
+          <h2>Login</h2>
+          <div class="row">
+            <input id="loginEmail" placeholder="Email" />
+          </div>
+          <div class="row">
+            <input id="loginPassword" type="password" placeholder="Password" />
+          </div>
+          <button id="loginBtn">Iniciar sesión</button>
+          <div id="tokenBox" class="token-box" style="display: none"></div>
+          <button id="logoutBtn" class="danger">Cerrar sesión</button>
+        </div>
+      </div>
+
+      <div id="appContent" style="display: none">
+        <div class="grid top-grid section-gap">
+          <div class="card">
+            <h2>Crear categoría</h2>
+            <div class="row">
+              <input id="categoryNombre" placeholder="Nombre de categoría" />
+            </div>
+            <div class="row">
+              <textarea id="categoryDescripcion" placeholder="Descripción"></textarea>
+            </div>
+            <button class="secondary" id="createCategoryBtn">Crear categoría</button>
+          </div>
+
+          <div class="card">
+            <h2>Crear producto</h2>
+            <div class="row">
+              <input id="productNombre" placeholder="Nombre del producto" />
+            </div>
+            <div class="row">
+              <textarea id="productDescripcion" placeholder="Descripción"></textarea>
+            </div>
+            <div class="row">
+              <input id="productPrecio" type="number" placeholder="Precio" />
+            </div>
+            <div class="row">
+              <input id="productStock" type="number" placeholder="Stock" />
+            </div>
+            <div class="row">
+              <input id="productCategoria" placeholder="ID de categoría" />
+            </div>
+            <button id="createProductBtn">Crear producto</button>
+          </div>
+        </div>
+
+        <div class="grid bottom-grid section-gap">
+          <div class="card">
+            <h2>Categorías</h2>
+            <button class="secondary" id="loadCategoriesBtn">Ver categorías</button>
+            <div id="categoriesList" class="list"></div>
+          </div>
+
+          <div class="card">
+            <h2>Productos</h2>
+            <button class="secondary" id="loadProductsBtn">Ver productos</button>
+            <div id="productsList" class="list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,
+h2 {
+  margin: 0 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.section-gap {
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.row {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.secondary {
+  background: #0f766e;
+}
+
+.secondary:hover {
+  background: #115e59;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.item {
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.status {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #075985;
+  display: none;
+}
+
+.token-box {
+  word-break: break-all;
+  font-size: 13px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.danger {
+  background: #dc2626;
+  margin-top: 10px;
+}
+
+.danger:hover {
+  background: #b91c1c;
+}
+.warning {
+  background: #f59e0b;
+  margin-top: 10px;
+}
+
+.warning:hover {
+  background: #d97706;
+}
+
+.item button {
+  margin-top: 10px;
+}
+
+.item button + button {
+  margin-top: 8px;
+}
+
+.warning {
+  background: #f59e0b;
+}
+
+.warning:hover {
+  background: #d97706;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.danger:hover {
+  background: #b91c1c;
+}
+
+.card h2 {
+  font-size: 20px;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.token-box {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.top-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
+}
+
+.bottom-grid {
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  align-items: start;
+}
+
+.login-card {
+  min-height: 340px;
+}
+
+.token-box {
+  margin-top: 12px;
+  font-weight: 600;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+#logoutBtn {
+  margin-top: 12px;
+}
