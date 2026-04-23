@@ -95,28 +95,35 @@ JWT_SECRET=secreto
 
 npm run dev
 
-# Endpoints principales
+### Endpoints principales
 
-# 1.Usuarios
 
-POST /api/users/register → registrar usuario
-POST /api/users/login → iniciar sesión
+# 1. 👤 Usuarios
+
+- POST /api/users/register → Registrar usuario  
+- POST /api/users/login → Login (devuelve token)
+
+---
 
 # 2. Categorías
 
-GET /api/categories → listar categorías
-POST /api/categories → crear categoría
-PUT /api/categories/:id → actualizar
-DELETE /api/categories/:id → eliminar
+- GET /api/categories → Obtener todas  
+- GET /api/categories/:id → Obtener una categoría por ID  
+- POST /api/categories → Crear (requiere token)  
+- PUT /api/categories/:id → Actualizar (requiere token)  
+- DELETE /api/categories/:id → Eliminar (requiere token)
 
-# 2. Productos
+---
 
-GET /api/products → listar productos
-POST /api/products → crear producto
-PUT /api/products/:id → actualizar
-DELETE /api/products/:id → eliminar
+# 3. Productos
 
-# 2.Autenticación
+- GET /api/products → Obtener todos (incluye categoría con populate)  
+- GET /api/products/:id → Obtener un producto por ID  
+- POST /api/products → Crear (requiere token)  
+- PUT /api/products/:id → Actualizar (requiere token)  
+- DELETE /api/products/:id → Eliminar (requiere token)
+
+# Autenticación
 
 Las rutas protegidas requieren token.
 
